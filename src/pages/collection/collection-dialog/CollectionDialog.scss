@@ -1,0 +1,60 @@
+@use "../../../assets/styles/color" as *;
+
+.collection-dialog {
+  text-align: center;
+
+  .MuiDialog-paper {
+    background-color: $white !important;
+  }
+
+  .MuiDialogTitle-root {
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  .MuiDialogContent-root {
+
+    .MuiTextField-root {
+      margin: .5rem 0;
+    }
+
+    .MuiTypography-body1 {
+      margin-bottom: .5rem;
+      text-align: left;
+      font-family: 'Signika', sans-serif;
+    }
+
+    .email-list {
+      display: flex;
+      flex-direction: column;
+
+      .MuiChip-root {
+        width: fit-content;
+        margin-bottom: .5rem;
+        border-color: $blue-700 !important;
+      }
+    }
+  }
+
+  .MuiDialogActions-root {
+    justify-content: center;
+
+    .MuiButton-root {
+      width: 120px;
+      margin: 0 .5rem;
+    }
+
+    .cancel-btn {
+      background-color: $gray-500;
+      &:hover {
+        background-color: $gray-300;
+      }
+    }
+  }
+}
+
+.MuiAutocomplete-popper {
+  .MuiAutocomplete-listbox {
+    max-height: 20vh;
+  }
+}
