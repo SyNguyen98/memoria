@@ -1,9 +1,11 @@
-name: Build and deploy to Azure Web App
+name: Deploy to Azure Web App
 
 on:
   push:
     branches:
-      - master
+      - main
+    paths:
+      - "backend/**"
 
 jobs:
   build:
@@ -22,13 +24,14 @@ jobs:
         run: echo "MONGODB_PASSWORD=${{ secrets.MONGODB_PASSWORD }}" >> $GITHUB_ENV
 
       - name: Build with Maven
+        working-directory: backend
         run: mvn clean install
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
         with:
           name: java-app
-          path: '${{ github.workspace }}/target/*.jar'
+          path: '${{ github.workspace }}/backend/target/*.jar'
 
   deploy:
     runs-on: ubuntu-latest
@@ -50,4 +53,4 @@ jobs:
           app-name: 'chika-memoria'
           slot-name: 'Production'
           package: '*.jar'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_F7FD91EA2B4748B4B65A5C5B91CB2DCD }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE }}
