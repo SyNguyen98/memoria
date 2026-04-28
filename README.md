@@ -1,5 +1,7 @@
 # Memoria
 
+[![Deploy to Azure Web App](https://github.com/SyNguyen98/memoria/actions/workflows/deploy-azure-web-app.yml/badge.svg)](https://github.com/SyNguyen98/memoria/actions/workflows/deploy-azure-web-app.yml) [![Deploy to Azure Static Web Apps](https://github.com/SyNguyen98/memoria/actions/workflows/deploy-azure-static-web-apps.yml/badge.svg)](https://github.com/SyNguyen98/memoria/actions/workflows/deploy-azure-static-web-apps.yml)
+
 A full-stack web application for storing, organizing, and browsing personal photo memories — geotagged and grouped into **Collections → Locations → Items**. Users sign in with Google OAuth2 and media files are stored in Microsoft OneDrive.
 
 ## Repository Structure
