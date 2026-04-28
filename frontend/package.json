@@ -27,7 +27,7 @@
     "@photo-sphere-viewer/equirectangular-video-adapter": "^5.14.1",
     "@photo-sphere-viewer/gyroscope-plugin": "^5.14.1",
     "@photo-sphere-viewer/video-plugin": "^5.14.1",
-    "@tanstack/react-query": "^5.99.2",
+    "@tanstack/react-query": "^5.100.5",
     "axios": "1.15.2",
     "date-fns": "^4.1.0",
     "howler": "^2.2.4",
