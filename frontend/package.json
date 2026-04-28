@@ -22,7 +22,7 @@
     "@mui/icons-material": "^9.0.0",
     "@mui/material": "^9.0.0",
     "@mui/system": "^9.0.0",
-    "@mui/x-date-pickers": "^9.0.2",
+    "@mui/x-date-pickers": "^9.0.4",
     "@photo-sphere-viewer/core": "^5.14.1",
     "@photo-sphere-viewer/equirectangular-video-adapter": "^5.14.1",
     "@photo-sphere-viewer/gyroscope-plugin": "^5.14.1",
