@@ -1,0 +1,65 @@
+@use "../../../assets/styles/breakpoint" as *;
+@use "../../../assets/styles/color" as *;
+
+.phone-img-dialog {
+
+  .MuiDialog-paper {
+    background-color: rgba(0, 0, 0, 0.8) !important;
+
+    .MuiDialogTitle-root {
+      color: $white;
+      padding: .5rem 1rem;
+      display: flex;
+      justify-content: space-between;
+
+      .location-name {
+        margin: auto 0;
+        font-size: 20px;
+        font-weight: 600;
+        max-width: 80%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      .MuiIconButton-root {
+        margin: auto 0;
+        color: white;
+        padding: 0;
+      }
+    }
+
+    .MuiDialogContent-root {
+      padding: 0 0 1rem;
+      display: flex;
+      flex-direction: column;
+      overflow-x: hidden;
+
+      .slick-slider {
+        margin: auto 0;
+
+        .slick-list, .slick-track, .slick-slide {
+          display: flex;
+
+          .slick-slide div {
+            margin: auto 0;
+          }
+        }
+      }
+    }
+
+    .item-loading {
+      position: absolute !important;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(165deg) !important;
+    }
+
+    .MuiDialogActions-root {
+      color: $white;
+      padding: .5rem 1rem;
+      justify-content: center;
+    }
+  }
+}
+

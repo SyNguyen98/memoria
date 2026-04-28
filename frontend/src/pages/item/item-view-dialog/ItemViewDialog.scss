@@ -1,0 +1,114 @@
+@use "../../../assets/styles/breakpoint" as *;
+@use "../../../assets/styles/color" as *;
+
+.item-view-dialog {
+
+  .MuiToolbar-root {
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 4px 2px -2px $gray-100;
+
+    .MuiTypography-h6 {
+      font-family: 'Signika', sans-serif;
+      font-size: 20px;
+      font-weight: bold;
+      @include respond(tablet) {
+        font-size: 16px;
+      }
+    }
+
+    .item-name {
+      @include respond(tablet) {
+        display: none;
+      }
+    }
+
+    .btn-wrapper {
+      display: flex;
+
+      .item-index {
+        display: flex;
+
+        .index {
+          margin: auto 0;
+          font-size: 18px;
+          @include respond(tablet) {
+            font-size: 16px;
+          }
+        }
+      }
+
+      .MuiDivider-root {
+        margin: auto 1rem;
+        height: 20px;
+        border-color: black;
+        @include respond(tablet) {
+          margin: auto .5rem;
+        }
+      }
+
+      .MuiIconButton-root {
+        margin: auto 0;
+        color: black;
+      }
+    }
+  }
+
+  .MuiDialogContent-root {
+    display: flex;
+    @include respond(tablet) {
+      padding: 1rem 0;
+      flex-direction: column;
+      overflow-x: hidden;
+    }
+
+    .item-loading {
+      position: absolute !important;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(165deg) !important;
+    }
+
+    .slick-slider {
+      margin: auto 0;
+      height: 100%;
+
+      .slick-list, .slick-track, .slick-slide {
+        display: flex;
+        height: 100%;
+
+        .slick-slide div {
+          margin: auto 0;
+          text-align: center;
+        }
+      }
+    }
+
+    .item-wrapper {
+      position: relative;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img, video {
+        position: absolute;
+        width: auto !important;
+        max-height: 99% !important;
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+.img-360-dialog {
+  .MuiIconButton-root {
+    position: fixed;
+    right: 8px;
+    top: 8px;
+    z-index: 99;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+}

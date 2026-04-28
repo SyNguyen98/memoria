@@ -1,0 +1,62 @@
+@use "../../../assets/styles/breakpoint" as *;
+@use "../../../assets/styles/color" as *;
+
+.location-dialog {
+  text-align: center;
+
+  .MuiDialog-paper {
+    min-width: 600px;
+    background-color: $white !important;
+    @include respond(tablet) {
+      min-width: unset;
+    }
+  }
+
+  .MuiDialogTitle-root {
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  .MuiDialogContent-root {
+
+    .MuiGrid-root {
+      margin: auto 0;
+    }
+
+    .MuiTextField-root {
+      margin: .5rem 0;
+    }
+
+    .time-input {
+      width: 100%;
+    }
+
+    .coor-btn {
+      margin: auto;
+    }
+  }
+
+  .MuiDialogActions-root {
+    justify-content: center;
+
+    .MuiButton-root {
+      width: 120px;
+      margin: 0 .5rem;
+    }
+
+    .cancel-btn {
+      background-color: $gray-500;
+      &:hover {
+        background-color: $gray-300;
+      }
+    }
+  }
+}
+
+#menu-takenYear, #menu-takenMonth, #menu-takenDay {
+  .MuiMenu-list {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    max-height: 200px;
+  }
+}

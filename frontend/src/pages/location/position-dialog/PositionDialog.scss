@@ -1,0 +1,44 @@
+@use "../../../assets/styles/breakpoint" as *;
+@use "../../../assets/styles/color" as *;
+
+.position-dialog {
+  text-align: center;
+
+  .MuiDialog-paper {
+    background-color: $white !important;
+  }
+
+  .MuiDialogTitle-root {
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  .MuiDialogContent-root {
+    @include respond(tablet) {
+      padding: 0 1rem 1rem;
+    }
+
+    .map-position {
+      width: 100%;
+      height: 500px;
+      @include respond(tablet) {
+        height: 300px;
+      }
+    }
+
+    .coordinate {
+      font-size: 16px;
+      font-weight: 500;
+      margin: 0 auto 1rem;
+    }
+
+    .MuiFormControl-root {
+      margin-bottom: 1rem;
+    }
+  }
+
+  .MuiButtonBase-root {
+    width: 100px;
+    margin: auto 1rem;
+  }
+}

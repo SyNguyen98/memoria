@@ -1,0 +1,139 @@
+@use "../../../assets/styles/breakpoint" as *;
+@use "../../../assets/styles/color" as *;
+
+.map-item-view-dialog {
+
+  .MuiDialog-paper {
+    background-color: rgba(0, 0, 0, 0.8) !important;
+
+    .MuiDialogTitle-root {
+      color: $white;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+
+      .location-place {
+        margin: auto 0;
+        font-size: 24px;
+        font-weight: 600;
+        @include respond(tablet) {
+          font-size: 20px;
+          max-width: 80%;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+      }
+
+      .item-name {
+        margin: auto 0;
+        font-size: 16px;
+        @include respond(tablet) {
+          display: none;
+        }
+      }
+
+      .btn-wrapper {
+        display: flex;
+
+        .item-index {
+          margin: auto 0;
+          @include respond(tablet) {
+            display: none;
+          }
+
+          .index {
+            margin: auto 0;
+            font-size: 18px;
+          }
+        }
+
+        .MuiDivider-root {
+          margin: auto 1rem;
+          height: 80%;
+          border-color: white;
+          @include respond(tablet) {
+            display: none;
+          }
+        }
+
+        .MuiIconButton-root {
+          margin: auto 0;
+          color: white;
+        }
+      }
+    }
+
+    .dialog-body {
+      height: calc(100% - 92px);
+      padding: 1rem;
+      display: flex;
+      transition: margin 225ms cubic-bezier(0.4, 0, 0.6, 1); /* MUI sharp easing */
+      position: relative;
+
+      .item-loading {
+        margin: auto;
+      }
+
+      .item-chose, img {
+        margin: auto;
+        max-height: 100%;
+        max-width: 100%;
+        width: auto !important;
+        z-index: 999;
+      }
+    }
+
+    .drawer-open {
+      margin-right: 240px;
+      transition-duration: 225ms;
+    }
+
+    .drawer-closed {
+      margin-right: 0;
+      transition-duration: 195ms;
+    }
+
+    .open-list-btn {
+      position: absolute;
+      top: 60px;
+      right: 1rem;
+      color: white;
+      z-index: 1000;
+      &:hover {
+        color: $blue-50;
+      }
+    }
+  }
+}
+
+.item-list-drawer {
+  width: 240px;
+  flex-shrink: 0;
+
+  .MuiDrawer-paper {
+    margin-top: 60px;
+    height: calc(100% - 60px);
+    width: 240px;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.2) !important;
+  }
+
+  .close-list-btn {
+    width: fit-content;
+    color: white;
+  }
+
+  .item {
+    height: 100px;
+    width: 50%;
+
+    img {
+      width: 100%;
+      height: auto;
+      max-height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
