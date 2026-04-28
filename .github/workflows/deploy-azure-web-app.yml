@@ -53,4 +53,4 @@ jobs:
           app-name: 'chika-memoria'
           slot-name: 'Production'
           package: '*.jar'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_F7FD91EA2B4748B4B65A5C5B91CB2DCD }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE }}
