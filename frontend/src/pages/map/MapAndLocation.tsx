@@ -73,15 +73,15 @@ export default function MapAndLocation() {
 
     useEffect(() => {
         if (locationQuery.data && locationQuery.data.length > 0) {
-            // eslint-disable-next-line react-hooks/set-state-in-effect
+            setBounds(locationQuery.data.map(location => [location.coordinate.latitude, location.coordinate.longitude]));
         }
     }, [locationQuery.data]);
 
     useEffect(() => {
         if (yearsQuery.data) {
             if (year !== "all" && !yearsQuery.data.includes(parseInt(year))) {
-                // eslint-disable-next-line react-hooks/set-state-in-effect
                 setYear("all");
+                const params: Record<string, string> = collectionId !== "all" ? {id: collectionId} : {};
                 setSearchParams(params);
             }
         }
